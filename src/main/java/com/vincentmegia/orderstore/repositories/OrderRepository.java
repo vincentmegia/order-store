@@ -10,4 +10,5 @@ import java.util.List;
 public interface OrderRepository extends JpaRepository<Order, Integer> {
     List<Order> test1();
     List<Order> test2();
+    List<Order> test3();
 }
