@@ -46,4 +46,8 @@ public class OrderController {
     public String getTest() {
         return this.springConfiguration.getTest();
     }
+
+    public String test1() {
+        return "1";
+    }
 }
