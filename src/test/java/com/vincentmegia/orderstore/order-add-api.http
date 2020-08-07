@@ -1,0 +1,13 @@
+POST http://localhost:8080/order
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "symbol": "nio",
+  "side": "buy",
+  "quantity": 1000
+}
+
+###
+
