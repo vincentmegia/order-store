@@ -50,4 +50,8 @@ public class OrderController {
     public String test1() {
         return "1";
     }
+
+    public String test2() {
+        return "2";
+    }
 }
