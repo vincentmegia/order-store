@@ -58,4 +58,8 @@ public class OrderController {
     public String test3() {
         return "3";
     }
+
+    public String test4() {
+        return "4";
+    }
 }
