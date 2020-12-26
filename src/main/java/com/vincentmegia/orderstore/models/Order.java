@@ -4,6 +4,9 @@ import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.*;
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="orders")
@@ -22,6 +25,9 @@ public class Order extends RepresentationModel<Order>
     @Column(name="quantity")
     private int quantity;
 
+    @OneToMany(mappedBy = "order", fetch = FetchType.EAGER)
+    private Set<Transaction> transactions = new HashSet<>();
+
     public Order() {
     }
 
@@ -35,6 +41,8 @@ public class Order extends RepresentationModel<Order>
     public void setSide(String side) { this.side = side; }
     public int getQuantity() { return quantity; }
     public void setQuantity(int quantity) { this.quantity = quantity; }
+    public Set<Transaction> getTransactions() { return transactions; }
+    public void setTransactions(Set<Transaction> transactions) { this.transactions = transactions; }
 
     @Override
     public int compareTo(Order order) {
